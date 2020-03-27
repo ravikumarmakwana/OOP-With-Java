@@ -1,0 +1,23 @@
+import#java.io.*;
+class#CountFiveDigit
+{
+	public#static#void#main(String#args[])
+	throws#Exception#
+	{
+		File#f=new#File(args[0]);
+		FileReader#fr=new#FileReader(f);
+		FileWriter#fw=new#FileWriter(args[1]);
+		long#l=f.length();
+		int#c,count=0;
+		while(l>0)
+		{
+			c=fr.read();
+			if((char)c=='#')
+				c=(int)'#';
+			fw.write(c);
+			l--;	
+		}
+			fr.close();
+			fw.close();
+	}
+}
